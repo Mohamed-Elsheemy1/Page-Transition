@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+
+main.hidden{
+    opacity: 0;
+}
+
+.container{
+    position: relative;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) ;
+
+}
+
+.logo{
+    grid-column: span 6;
+}
+
+nav{
+    grid-column: span 6;
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+}
+
+.container h1, .container img{
+    grid-column: span 12;
+    margin-bottom: 1rem;
+}
+
+.container p{
+    grid-column: span 6;
+    margin-bottom: 1rem;
+}
+
+img{
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+p, a, h5{
+    font-size: .8rem;
+}
+
+.transition__div{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 10;
+    transition: 1s;
+    will-change: transform;
+}
+
+.transition__div.animate__in{
+    transform: translateX(100%);
+}
+
+.transition__div.animate__out{
+    transform: translateX(200%);
+}
